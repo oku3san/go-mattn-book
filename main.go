@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "sort"
+)
 
 //type Fruit int
 //type Animal int
@@ -42,5 +45,15 @@ func main() {
     m["Bob"] = 18
     m["Mark"] = 33
 
-    fmt.Println(m)
+    keys := []string{}
+    for k := range m {
+        fmt.Println(k)
+        keys = append(keys, k)
+    }
+    fmt.Println(keys)
+    sort.Strings(keys)
+    fmt.Println(keys)
+    for _, k := range keys {
+        fmt.Printf("%v, %v\n", k, m[k])
+    }
 }
