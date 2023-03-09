@@ -1,9 +1,6 @@
 package main
 
-import (
-    "fmt"
-    "sort"
-)
+import "fmt"
 
 //type Fruit int
 //type Animal int
@@ -40,20 +37,30 @@ func main() {
     //s = string(rs)
     //println(s)
 
-    m := make(map[string]int)
-    m["John"] = 21
-    m["Bob"] = 18
-    m["Mark"] = 33
+    //m := make(map[string]int)
+    //m["John"] = 21
+    //m["Bob"] = 18
+    //m["Mark"] = 33
+    //
+    //keys := []string{}
+    //for k := range m {
+    //    fmt.Println(k)
+    //    keys = append(keys, k)
+    //}
+    //fmt.Println(keys)
+    //sort.Strings(keys)
+    //fmt.Println(keys)
+    //for _, k := range keys {
+    //    fmt.Printf("%v, %v\n", k, m[k])
+    //}
 
-    keys := []string{}
-    for k := range m {
-        fmt.Println(k)
-        keys = append(keys, k)
+    m := map[string]string{
+        "foo": "bar",
+        "zoo": "zoo",
     }
-    fmt.Println(keys)
-    sort.Strings(keys)
-    fmt.Println(keys)
-    for _, k := range keys {
-        fmt.Printf("%v, %v\n", k, m[k])
+    v, ok := m["zoo"]
+    fmt.Println(ok)
+    if ok {
+        fmt.Println(v)
     }
 }
