@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //type Fruit int
 //type Animal int
 //
@@ -34,4 +36,11 @@ func main() {
     //rs[4] = 'は'
     //s = string(rs)
     //println(s)
+
+    m := make(map[string]int)
+    m["John"] = 21
+    m["Bob"] = 18
+    m["Mark"] = 33
+
+    fmt.Println(m)
 }
