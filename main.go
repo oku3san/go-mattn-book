@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //type Fruit int
 //type Animal int
 //
@@ -54,13 +52,13 @@ func main() {
     //    fmt.Printf("%v, %v\n", k, m[k])
     //}
 
-    m := map[string]string{
-        "foo": "bar",
-        "zoo": "zoo",
-    }
-    v, ok := m["zoo"]
-    fmt.Println(ok)
-    if ok {
-        fmt.Println(v)
-    }
+    //m := map[string]string{
+    //    "foo": "bar",
+    //    "zoo": "zoo",
+    //}
+    //v, ok := m["zoo"]
+    //fmt.Println(ok)
+    //if ok {
+    //    fmt.Println(v)
+    //}
 }
