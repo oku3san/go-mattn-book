@@ -13,7 +13,6 @@ func main() {
         Age:  18,
     }
     showName(&user)
-
 }
 
 func showName(user *User) {
