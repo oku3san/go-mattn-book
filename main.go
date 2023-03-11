@@ -13,10 +13,13 @@ func main() {
 }
 
 func doSomething() {
-    var n = 1
-    defer func() {
-        fmt.Println(n)
-    }()
+    //var n = 1
+    //defer func() {
+    //    fmt.Println(n)
+    //}()
+    //n = 2
 
+    var n = 1
+    defer fmt.Println(n)
     n = 2
 }
