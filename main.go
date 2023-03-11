@@ -2,19 +2,14 @@ package main
 
 import "fmt"
 
-type User struct {
-    Name string
-    Age  int
+type Value int
+
+func (v Value) Add(n Value) Value {
+    return v + n
 }
 
 func main() {
-    user := User{
-        Name: "Bob",
-        Age:  18,
-    }
-    showName(&user)
-}
-
-func showName(user *User) {
-    fmt.Println(user.Name)
+    v := Value(1)
+    v = v.Add(2)
+    fmt.Println(v)
 }
