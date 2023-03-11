@@ -1,7 +1,6 @@
 package main
 
 import (
-    "fmt"
     "sync"
 )
 
@@ -26,6 +25,6 @@ func main() {
     }()
 
     wg.Wait()
-    fmt.Println(n)
+    println(n)
 
 }
