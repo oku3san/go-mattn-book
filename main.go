@@ -2,20 +2,34 @@ package main
 
 import "fmt"
 
-type Value int
+type Speaker interface {
+    Speak() error
+}
 
-func (v *Value) Add(n Value) {
-    //return v + n
-    *v += n
+type Dog struct {
+}
+
+func (d *Dog) Speak() error {
+    fmt.Println("BowWow")
+    return nil
+}
+
+type Cat struct {
+}
+
+func (c *Cat) Speak() error {
+    fmt.Println("Meow")
+    return nil
+}
+
+func DoSpeak(s Speaker) error {
+    return s.Speak()
 }
 
 func main() {
-    v := Value(1)
-    v.Add(2)
-    fmt.Println(v)
+    dog := Dog{}
+    DoSpeak(&dog)
 
-    //v := 1
-    //p := &v
-    //*p = 2
-    //fmt.Println(v)
+    cat := Cat{}
+    DoSpeak(&cat)
 }
